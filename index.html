@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Tailwind</title>
+    <link rel="stylesheet" href="./style/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="px-16 font-poppins">
+
+    <!-- Header -->
+  <header class="flex flex-col md:flex-row md:justify-between md:items-center gap-4 border-b border-gray-200 py-0 px-4 md:px-16">
+    <div class="w-[150px]">
+      <img src="./image/Logo.png" alt="" class="w-full h-full object-contain">
+    </div>
+
+    <ul class="flex flex-wrap justify-center md:justify-start items-center gap-4 text-sm">
+        <li class="relative py-5 group">
+          <a class="group-hover:text-accent group-hover:font-bold" href="">Home</a>
+          <span class="absolute left-0 bottom-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-300"></span>
+        </li>
+        <li class="relative py-5 group">
+          <a class="group-hover:text-accent group-hover:font-bold" href="">Shop</a>
+          <span class="absolute left-0 bottom-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-300"></span>
+        </li>
+        <li class="relative py-5 group">
+          <a class="group-hover:text-accent group-hover:font-bold" href="">Plant Care</a>
+          <span class="absolute left-0 bottom-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-300"></span>
+        </li>
+        <li class="relative py-5 group">
+          <a class="group-hover:text-accent group-hover:font-bold" href="">Blogs</a>
+          <span class="absolute left-0 bottom-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-300"></span>
+        </li>
+      </ul>
+
+      <div class="flex gap-4 items-center justify-center md:justify-end">
+        <span class="material-symbols-outlined cursor-pointer hover:text-accent transition">search</span>
+        <div class="relative">
+          <span class="material-symbols-outlined cursor-pointer text-2xl">shopping_cart</span>
+          <span class="absolute -top-1 -right-2 bg-accent text-white text-xs rounded-full px-1.5">6</span>
+        </div>
+        <button class="flex gap-2 items-center bg-accent py-2 px-4 text-white rounded-md hover:bg-green-700 transition">
+          <span class="material-symbols-outlined">login</span>
+          Login
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+  <section class="py-7 px-4 md:px-16">
+    <div class="flex flex-col md:flex-row justify-between items-center bg-[#f4f4f4] p-6 md:p-10 shadow-md gap-6">
+      <div class="max-w-xl">
+        <p class="text-black/80 uppercase tracking-wider text-sm">Welcome to Greenshop</p>
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mt-1">
+          <span class="text-black/80">LET’S MAKE A</span><br>
+          <span class="text-black/80">BETTER </span><span class="text-accent font-bold">PLANET</span>
+        </h1>
+        <p class="mt-2 text-gray-500 text-sm leading-relaxed max-w-[620px]">We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!</p>
+        <button class="mt-8 bg-accent text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 transition">SHOP NOW</button>
+      </div>
+      <div class="flex justify-center">
+        <img src="./image/plant.png" alt="Plant" class="w-64 md:w-96 h-auto">
+      </div>
+    </div>
+  </section>
+
+    <!-- Tabs + Sort -->
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mt-12 mb-6 px-4 md:px-16">
+    <div class="flex gap-6 border-b border-white justify-center sm:justify-start">
+      <button class="pb-2 border-b-2 border-green-600 text-green-600 font-medium">All Plants</button>
+      <button class="pb-2 border-b-2 border-transparent hover:text-green-600">New Arrival</button>
+      <button class="pb-2 border-b-2 border-transparent hover:text-green-600">Sale</button>
+    </div>
+    <div class="text-sm text-gray-700">
+      Sort by:
+      <select class="ml-2 border rounded px-2 py-1 text-gray-700">
+        <option>Default sorting</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+  
+  <!-- Product Grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-16">
+    <!-- Product Card 1 -->
+    <div class="bg-white p-4 shadow rounded text-center">
+      <img src="./image/plant1.png" alt="Barberton Daisy" class="h-40 mx-auto mb-3" />
+      <h3 class="font-semibold text-gray-800">Barberton Daisy</h3>
+      <p class="text-green-600 font-bold">$119.00</p>
+    </div>
+  
+    <!-- Product Card 2 -->
+    <div class="bg-white p-4 shadow rounded text-center">
+      <img src="./image/plant2.png" alt="Angel Wing Begonia" class="h-40 mx-auto mb-3" />
+      <h3 class="font-semibold text-gray-800">Angel Wing Begonia</h3>
+      <p class="text-green-600 font-bold">$169.00</p>
+    </div>
+  
+    <!-- Product Card 3 (with discount) -->
+    <div class="relative bg-white p-4 shadow rounded text-center">
+        <span class="absolute top-2 left-2 bg-accent text-white text-xs px-2 py-1">13% OFF</span>
+        <img src="./image/plant3.png" alt="African Violet" class="h-40 mx-auto mb-3" />
+        <h3 class="font-semibold text-gray-800">African Violet</h3>
+        <p>
+            <span class="text-green-600 font-bold">$199.00</span>
+            <span class="line-through text-gray-400 text-sm ml-1">$229.00</span>
+        </p>
+    </div>
+  
+    <!-- Product Card 4 -->
+    <div class="bg-white p-4 shadow rounded text-center">
+      <img src="./image/plant4.png" alt="Beach Spider Lily" class="h-40 mx-auto mb-3" />
+      <h3 class="font-semibold text-gray-800">Beach Spider Lily</h3>
+      <p class="text-green-600 font-bold">$129.00</p>
+    </div>
+
+    <!-- Product Card 5 -->
+    <div class="bg-white p-4 shadow rounded text-center">
+        <img src="./image/plant5.png" alt="Blushing Bromeliad" class="h-40 mx-auto mb-3" />
+        <h3 class="font-semibold text-gray-800">Blushing Bromeliad</h3>
+        <p class="text-green-600 font-bold">$139.00</p>
+    </div>
+
+    <!-- Product Card 6 -->
+    <div class="bg-white p-4 shadow rounded text-center">
+        <img src="./image/plant6.png" alt="Bird's Nest Fern" class="h-40 mx-auto mb-3" />
+        <h3 class="font-semibold text-gray-800">Bird's Nest Fern</h3>
+        <p class="text-green-600 font-bold">$99.00</p>
+    </div>
+
+    <!-- Product Card 7 -->
+    <div class="bg-white p-4 shadow rounded text-center">
+        <img src="./image/plant7.png" alt="Broadleaf Lady Palm" class="h-40 mx-auto mb-3" />
+        <h3 class="font-semibold text-gray-800">Broadleaf Lady Palm</h3>
+        <p class="text-green-600 font-bold">$59.00</p>
+    </div>
+
+    <!-- Product Card 8 -->
+    <div class="bg-white p-4 shadow rounded text-center">
+        <img src="./image/plant8.png" alt="Aluminum Plant" class="h-40 mx-auto mb-3" />
+        <h3 class="font-semibold text-gray-800">Aluminum Plant</h3>
+        <p class="text-green-600 font-bold">$179.00</p>
+    </div>
+  </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center mt-10 mb-20 space-x-2 text-sm">
+    <button class="w-8 h-8 flex items-center justify-center border border-gray-300 text-white font-semibold rounded bg-accent">
+      1
+    </button>
+    <button class="w-8 h-8 flex items-center justify-center border border-gray-300 text-gray-600 hover:bg-green-100 hover:text-green-600 rounded">
+      2
+    </button>
+    <button class="w-8 h-8 flex items-center justify-center border border-gray-300 text-gray-600 hover:bg-green-100 hover:text-green-600 rounded">
+      3
+    </button>
+    <button class="w-8 h-8 flex items-center justify-center border border-gray-300 text-gray-600 hover:bg-green-100 hover:text-green-600 rounded">
+      4
+    </button>
+    <button class="w-8 h-8 flex items-center justify-center border border-gray-300 text-gray-600 hover:bg-green-100 hover:text-green-600 rounded">
+
+    </button>
+  </div>
+
+  <!-- Promo Banners -->
+  <div class="mt-16 px-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Banner 1 -->
+    <div class="flex items-center bg-white p-6 shadow-md">
+      <img src="./image/plant9.png" alt="Summer Cactus" class="w-72 h-auto">
+      <div class="text-right">
+        <h3 class="font-bold text-lg text-gray-800">SUMMER CACTUS<br>& SUCCULENTS</h3>
+        <p class="text-sm text-gray-500 mt-1">We are an online plant shop offering a wide range of cheap and trendy plants</p>
+        <button class="mt-4 bg-accent text-white px-6 py-2 rounded hover:bg-green-700 text-sm">Find More</button>
+      </div>
+    </div>
+  
+    <!-- Banner 2 -->
+    <div class="flex items-center bg-white p-6 shadow-md">
+      <img src="./image/plant10.png" alt="Styling Trends" class="w-72 h-auto ml-0">
+      <div class="text-right">
+        <h3 class="font-bold text-lg text-gray-800">STYLING TRENDS<br>& MUCH MORE</h3>
+        <p class="text-sm text-gray-500 mt-1">We are an online plant shop offering a wide range of cheap and trendy plants</p>
+        <button class="mt-4 bg-accent text-white px-6 py-2 rounded hover:bg-green-700 text-sm">Find More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-50 mt-16 py-6 px-4 md:px-16">
+    <div class="flex flex-col md:flex-row items-center justify-between text-sm text-gray-700 space-y-4 md:space-y-0">
+      <!-- Logo & Address -->
+        <div class="w-[150px]">
+            <img src="./image/Logo.png" alt="" class="w-full h-full">
+        </div>
+      
+        <!-- Location -->
+      <div class="flex items-center space-x-2">
+        <span class="material-symbols-outlined text-accent">location_on</span>
+        <p>70 West Buckingham Ave. <br> Farmingdale, NY 11735</p>
+      </div>
+  
+      <!-- Email -->
+      <div class="flex items-center space-x-2">
+        <span class="material-symbols-outlined text-accent">mail</span>
+        <a href="mailto:contact@greenshop.com">contact@greenshop.com</a>
+      </div>
+  
+      <!-- Phone -->
+      <div class="flex items-center space-x-2">
+        <span class="material-symbols-outlined text-accent">call</span>
+        <span>+88 01911 717 490</span>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Copyright -->
+  <div class="bg-white text-center text-xs text-gray-500 py-10">
+    © 2025 GreenShop. All Rights Reserved.
+  </div>
+  
+  
+</body>
+
+</html>
